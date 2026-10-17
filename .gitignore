@@ -1,0 +1,11 @@
+# Compiled programs and object files
+*.exe
+*.out
+*.o
+*.obj
+
+# Local editor configuration
+.vscode/
+
+# Output created by the file handling lesson
+programming_in_c_demo.txt
