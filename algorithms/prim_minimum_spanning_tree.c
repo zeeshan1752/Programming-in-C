@@ -54,13 +54,13 @@ static int prim_mst(int graph[MAX_VERTICES][MAX_VERTICES], int vertex_count)
         }
     }
 
-    int total_weight = 0;
+    long long total_weight = 0;
     puts("Minimum spanning tree edges:");
     for (int vertex = 1; vertex < vertex_count; vertex++) {
         printf("%d - %d (weight %d)\n", parent[vertex], vertex, key[vertex]);
         total_weight += key[vertex];
     }
-    printf("Total weight: %d\n", total_weight);
+    printf("Total weight: %lld\n", total_weight);
     return 1;
 }
 

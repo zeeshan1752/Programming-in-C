@@ -10,6 +10,11 @@ int main(void)
         return 1;
     }
 
+    if (count > (size_t)-1 / sizeof(int)) {
+        fprintf(stderr, "Requested allocation is too large.\n");
+        return 1;
+    }
+
     int *values = malloc(count * sizeof *values);
     if (values == NULL) {
         fprintf(stderr, "Memory allocation failed.\n");
