@@ -6,7 +6,7 @@ int main(void)
 {
     int values[MAX_ITEMS];
     int count;
-    int sum = 0;
+    long long sum = 0;
 
     printf("How many integers (1-%d)? ", MAX_ITEMS);
     if (scanf("%d", &count) != 1 || count < 1 || count > MAX_ITEMS) {
@@ -27,8 +27,7 @@ int main(void)
     for (int i = 0; i < count; i++) {
         printf("%d%s", values[i], i + 1 == count ? "\n" : " ");
     }
-    printf("Sum: %d\n", sum);
+    printf("Sum: %lld\n", sum);
     printf("Average: %.2f\n", (double)sum / count);
-
     return 0;
 }

@@ -1,13 +1,19 @@
-#include<stdio.h>
-int main(){
-    int n, factorial=1;
-    printf("Enter a number to calculate its factorial: ");
-    scanf("%d", &n);
-    for (int i = n; i; i--)
-    {
-        factorial *= i;
+#include <stdio.h>
+
+int main(void)
+{
+    int number;
+    printf("Enter an integer from 0 to 20: ");
+    if (scanf("%d", &number) != 1 || number < 0 || number > 20) {
+        fprintf(stderr, "Factorial is supported here for values from 0 to 20.\n");
+        return 1;
     }
-    printf("The factorial of %d is: %d", n, factorial);
-    
+
+    unsigned long long factorial = 1;
+    for (int value = 2; value <= number; value++) {
+        factorial *= (unsigned long long)value;
+    }
+
+    printf("%d! = %llu\n", number, factorial);
     return 0;
 }
